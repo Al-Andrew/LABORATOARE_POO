@@ -24,7 +24,7 @@ int main(int argc, char** argv)
     FILE* fisier;
     int suma = 0;
     //!! THIS CAN BE NULL
-    fisier = fopen("ini.txt", "r");
+    fopen_s(&fisier, "ini.txt", "r");
     while( fisier != NULL && !feof(fisier) )
     {
         fgets(nr, 127, fisier);

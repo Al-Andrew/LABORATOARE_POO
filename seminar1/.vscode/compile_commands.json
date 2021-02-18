@@ -6,11 +6,11 @@
 },
 {
   "directory": "C:\\dev\\POO_1S2\\seminar1",
-  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-DNDEBUG", "-Fobuild\\.objs\\p3\\windows\\x64\\release\\src\\p3.cpp.obj", "src\\p3.cpp"],
-  "file": "src\\p3.cpp"
+  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-DNDEBUG", "-Fobuild\\.objs\\p2\\windows\\x64\\release\\src\\p2.cpp.obj", "src\\p2.cpp"],
+  "file": "src\\p2.cpp"
 },
 {
   "directory": "C:\\dev\\POO_1S2\\seminar1",
-  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-DNDEBUG", "-Fobuild\\.objs\\p2\\windows\\x64\\release\\src\\p2.cpp.obj", "src\\p2.cpp"],
-  "file": "src\\p2.cpp"
+  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-DNDEBUG", "-Fobuild\\.objs\\p3\\windows\\x64\\release\\src\\p3.cpp.obj", "src\\p3.cpp"],
+  "file": "src\\p3.cpp"
 }]
