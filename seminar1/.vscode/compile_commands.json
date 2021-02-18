@@ -1,0 +1,6 @@
+[
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar1",
+  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-DNDEBUG", "-Fobuild\\.objs\\p4\\windows\\x64\\release\\src\\p4.cpp.obj", "src\\p4.cpp"],
+  "file": "src\\p4.cpp"
+}]
