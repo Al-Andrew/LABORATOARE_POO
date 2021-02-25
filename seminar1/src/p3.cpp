@@ -8,10 +8,10 @@
 */
 int split(char *propozitie, const char* delim, char *cuvinte[128][32])
 {
+    unsigned int i = 0; 
     char* cuvant;
     char *next_token;
     cuvant = strtok_s(propozitie, delim, &next_token);
-    unsigned int i = 0; 
     while(cuvant != NULL)
     {
         (*cuvinte)[i] = cuvant;
