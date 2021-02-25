@@ -11,8 +11,7 @@ bool NumberList::Add(int x)
     if(count >= 10)
         return false;
     
-    this->numbers[this->count] = x;
-    count++;
+    this->numbers[this->count++] = x;
     return true;
 }
 
