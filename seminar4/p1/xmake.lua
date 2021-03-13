@@ -1,8 +1,14 @@
 add_rules("mode.debug", "mode.release")
 
+if is_mode("debug")
+    then
+        set_symbols("debug")
+    end
+
 target("p1")
     set_kind("binary")
     add_files("src/*.cpp")
+    
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io

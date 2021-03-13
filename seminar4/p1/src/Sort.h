@@ -17,7 +17,7 @@ class Sort{
     Sort(uint32_t size, ...);
     Sort(const char* elements);
 
-    void InsertSort();
+    void InsertSort(bool ascendent=false);
     void QuickSort(bool ascendent=false);
     void BubbleSort(bool ascendent=false);
 

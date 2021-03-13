@@ -1,0 +1,11 @@
+[
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar4\\p1",
+  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-DNDEBUG", "-Fobuild\\.objs\\p1\\windows\\x64\\release\\src\\main.cpp.obj", "src\\main.cpp"],
+  "file": "src\\main.cpp"
+},
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar4\\p1",
+  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-DNDEBUG", "-Fobuild\\.objs\\p1\\windows\\x64\\release\\src\\Sort.cpp.obj", "src\\Sort.cpp"],
+  "file": "src\\Sort.cpp"
+}]

@@ -110,19 +110,26 @@ int64_t Sort::GetElementFromIndex(uint32_t index){
     return (index > 0 && index < this->m_size)?this->m_arr[index]:INT64_MIN;
 }
 
-void Sort::InsertSort(){
-    uint32_t i,j;
-    int64_t key;
-    for(i = 1; i < this->m_size - 1; ++i)
+void Sort::InsertSort(bool ascendent){
+    for(uint32_t j = 0,key; j < this->m_size - 1; ++j)
     {
-        key = this->m_arr[i];
-        j = i - 1;
-        while( j >= 0 && this->m_arr[j] > key)
+        key = j;
+        for(uint32_t i=j+1; i < this->m_size ; ++i)
         {
-            this->m_arr[j + 1] = this->m_arr[j]; 
-            j = j - 1;
+            if(!ascendent && this->m_arr[key] < this->m_arr[i])
+            {
+                key = i;
+            }
+            else if(ascendent && this->m_arr[key] > this->m_arr[i])
+            {
+                key = i;
+            }
         }
-        this->m_arr[j + 1] = key;
+        int64_t temp = this->m_arr[key];
+        this->m_arr[key] = this->m_arr[j];
+        this->m_arr[j] = temp;
+        // this->Print();
+        // std::cout << "\n";
     }
 }
 
@@ -133,7 +140,13 @@ void Sort::BubbleSort(bool ascendent){
         done = true;
         for(uint32_t i = 0; i < this->m_size - 1; ++i)
         {
-            if( this->m_arr[i] > this->m_arr[i+1]){
+            if(!ascendent && this->m_arr[i] > this->m_arr[i+1]){
+                int64_t tmp = this->m_arr[i];
+                this->m_arr[i] = this->m_arr[i+1];
+                this->m_arr[i+1] = tmp;
+                done = false;
+            }
+            else if(ascendent && this->m_arr[i] < this->m_arr[i+1]){
                 int64_t tmp = this->m_arr[i];
                 this->m_arr[i] = this->m_arr[i+1];
                 this->m_arr[i+1] = tmp;
@@ -142,4 +155,50 @@ void Sort::BubbleSort(bool ascendent){
         }
     }
 }
-void QuickSort(bool ascendent=false);
+
+void swap_internal(int64_t* a, int64_t* b) 
+{ 
+    int64_t t = *a; 
+    *a = *b; 
+    *b = t; 
+} 
+
+uint32_t partition(int64_t arr[], uint32_t low, uint32_t high){
+    int64_t pivot = arr[high];
+    uint32_t i = ( low - 1);
+    int64_t tmp;
+
+     for (uint32_t j = low; j <= high - 1; j++) 
+    { 
+        if (arr[j] < pivot) 
+        { 
+            i++; 
+            swap_internal(&arr[i], &arr[j]); 
+        } 
+    } 
+    swap_internal(&arr[i + 1], &arr[high]); 
+    return i+1;
+}
+
+void qs_impl(int64_t arr[], uint32_t low, uint32_t high)
+{
+    if(low < high)
+    {
+        uint32_t pi = partition(arr,low,high);
+
+        qs_impl(arr,  low, pi-1);
+        qs_impl(arr, pi+1, high);
+    }
+}
+
+
+void Sort::QuickSort(bool ascendent){
+    qs_impl(this->m_arr, 0, this->m_size-1);
+    if(!ascendent)
+    {
+        for(uint32_t i = 0; i < this->m_size/2 ; i++)
+        {
+            swap_internal(&m_arr[i], &m_arr[m_size-i-1]);
+        }
+    }
+}
