@@ -1,0 +1,11 @@
+[
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar9\\p1",
+  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX86\\x86\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-std:c++17", "-DNDEBUG", "-Fobuild\\.objs\\p1\\windows\\x86\\release\\src\\Helpers.cpp.obj", "src\\Helpers.cpp"],
+  "file": "src\\Helpers.cpp"
+},
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar9\\p1",
+  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX86\\x86\\cl.exe", "-c", "/EHsc", "-nologo", "-Ox", "-fp:fast", "-std:c++17", "-DNDEBUG", "-Fobuild\\.objs\\p1\\windows\\x86\\release\\src\\main.cpp.obj", "src\\main.cpp"],
+  "file": "src\\main.cpp"
+}]
