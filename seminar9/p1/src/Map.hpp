@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <iostream>
+#include <cmath>
 
 template<typename Key_T, typename Value_T>
 class MapElem
@@ -12,22 +13,22 @@ public:
     Value_T value;
     uint32_t index = 0;
     bool empty = true;
-    MapElem<Key_T,Value_T>* next = nullptr;;
+    MapElem<Key_T,Value_T>* next = nullptr;
 };
 
 template<typename T>
 uint64_t Hash(T value);
 
-
 //Good enough, simple enough
 template<>
 uint64_t Hash<int>(int value)
 {
-    constexpr static double A = 0.6180339887498948; // (sqrt(5) -1)/2; // Magic number 
-    constexpr static uint64_t B = 0xeaa127fa; // Magic number;
-    constexpr static uint64_t M = (1ul << 27ul);
-    uint64_t C = B >> static_cast<uint64_t>(value % 23);  
-    return M*( static_cast<double>(value + C ) *A );
+    constexpr static long double A = 0.6180339887498948; // (sqrt(5) -1)/2; // Magic number 
+    constexpr static uint64_t M = (1ull << 63ull);
+    long double param = static_cast<long double>(value)*A;
+    long double fract, intp;
+    fract = std::modf(param, &intp);
+    return static_cast<long double>(M)*fract;
 }
 
 template<typename Key_T, typename Value_T>
@@ -87,8 +88,6 @@ class Iterator
     uint64_t m_capacity = 0;
     Elem_T* m_curr_node = nullptr;
 };
-
-
 
 template <typename Key_T, typename Value_T>
 class Map

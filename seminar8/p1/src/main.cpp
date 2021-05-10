@@ -5,7 +5,6 @@
 #include <string>
 #include <regex>
 #include <algorithm>
-#include <ostream>
 
 std::vector<std::string> split(const std::string str, const std::string delim)
 {
@@ -27,7 +26,7 @@ int main(int argc, char** argv)
     [](unsigned char c){ return std::tolower(c); });
     
     //Tokenize
-    std::vector<std::string> tokens(split(text,"(\\. | |\\? |! )")); 
+    std::vector<std::string> tokens(split(text,"(\\. |\\? |! | )")); 
 
     //Put them in the map
     std::map<std::string, uint32_t> map;

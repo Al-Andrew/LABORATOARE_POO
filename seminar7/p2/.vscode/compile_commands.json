@@ -1,6 +1,6 @@
 [
 {
   "directory": "C:\\dev\\POO_1S2\\seminar7\\p2",
-  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX86\\x86\\cl.exe", "-c", "/EHsc", "-nologo", "-Zi", "-FS", "-Fdbuild\\windows\\x86\\debug\\compile.p2.pdb", "-Od", "-Fobuild\\.objs\\p2\\windows\\x86\\debug\\src\\main.cpp.obj", "src\\main.cpp"],
+  "arguments": ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX86\\x86\\cl.exe", "-c", "/EHsc", "-nologo", "-Zi", "-FS", "-Fdbuild\\windows\\x86\\debug\\compile.p2.pdb", "-Od", "-std:c++latest", "-Fobuild\\.objs\\p2\\windows\\x86\\debug\\src\\main.cpp.obj", "src\\main.cpp"],
   "file": "src\\main.cpp"
 }]

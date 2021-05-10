@@ -33,8 +33,6 @@ public:
     friend Iterator operator+(difference_type diff, const Iterator& a){ return Iterator(a.m_ptr+diff); }
     friend Iterator operator-(const Iterator& b, difference_type diff) { return Iterator(b.m_ptr - diff); }
     friend difference_type operator-(const Iterator& b, const Iterator& a) { return static_cast<ptrdiff_t>(b.m_ptr - a.m_ptr); }
-
-
     T& operator[](size_t index) { return *(m_ptr + index); }
 
     friend bool operator==(const Iterator& a, const Iterator& b) { return a.m_ptr == b.m_ptr; }
@@ -139,7 +137,7 @@ public:
         }
         return -1;
     }
-
+    
     Iterator<T> begin(){ return Iterator<T>(m_data); }
     Iterator<T> end(){ return Iterator<T>(m_data+m_size); }
 
