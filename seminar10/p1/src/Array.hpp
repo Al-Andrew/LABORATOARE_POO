@@ -137,11 +137,14 @@ public:
 		if( index < 0 || index >= Size )
 			throw ArrayException("ArrayException: Index out of bounds");
 		delete List[index];
+		--Size;
+		for(int i = 0; i < Size; i++)
+			List[index + i] = List[index + i + 1]; 
 		return *this;
 	} // sterge un element de pe pozitia index, returneaza this. Daca index e invalid arunca o exceptie
 
 	bool operator==(const Array<T> &otherArray)
-	{
+	{	
 		if( Capacity != otherArray.Capacity || Size != otherArray.Size )
 			return false;
 		return ( std::mismatch(List, List + Size, otherArray.List ) == List + Size );

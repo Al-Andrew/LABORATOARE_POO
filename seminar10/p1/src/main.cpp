@@ -37,4 +37,6 @@ int main()
     }
     arr.Insert(1,arr2);
     std::cout << "Inserting arr2 in arr on pos 3:" << arr << '\n';
+    arr.Delete(1);
+    std::cout << "Deleting index 3 in arr : " << arr << '\n';
 }
