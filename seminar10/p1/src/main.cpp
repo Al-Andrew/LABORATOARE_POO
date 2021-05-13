@@ -39,4 +39,20 @@ int main()
     std::cout << "Inserting arr2 in arr on pos 3:" << arr << '\n';
     arr.Delete(1);
     std::cout << "Deleting index 3 in arr : " << arr << '\n';
+
+    Array<int> arr3(4);
+    arr3+=2;
+    arr3+=3;
+  
+    try
+    {
+        arr3+=4;
+        arr3+=5;
+        arr3+=6;
+    }
+    catch(const ArrayException& e)
+    {
+        std::cout << e.what() << '\n';
+    }
+
 }

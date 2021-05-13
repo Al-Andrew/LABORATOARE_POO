@@ -86,13 +86,6 @@ public:
 		} 
 	} // constructor de copiere
 
-	T& operator[] (int index)
-	{
-		if( index < 0 || index >= Size )
-			throw ArrayException("Index out of bounds");
-		return *List[index];
-	} // arunca exceptie daca index este out of range
-
 	const T& operator[] (int index) const
 	{
 		if( index < 0 || index >= Size )
@@ -103,7 +96,10 @@ public:
 	//This requires T to be copy constructable
 	const Array<T>& operator+=(const T &newElem)
 	{
-		List[Size == Capacity?Size:Size++] = new T(newElem);
+		if( Size == Capacity )
+			throw ArrayException("Array capacity exceeded");
+
+		List[Size++] = new T(newElem);
 		return *this;
 	} // adauga un element de tipul T la sfarsitul listei si returneaza this
 	
@@ -155,7 +151,7 @@ public:
 		Capacity = otherArray.Capacity;
 		Size = otherArray.Size;
 		if( otherArray.List == nullptr )
-			List = nullptr;
+			return false;
 		else
 		{
 			if( List != nullptr )
