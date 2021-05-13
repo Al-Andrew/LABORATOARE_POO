@@ -16,7 +16,7 @@ class SortFixed
         int i = (low - 1);
         for (int j = low; j < high; j++)
         {    
-            if (List[j] <= pivot) {
+            if (List[j] > pivot) {
                 i++;
                 swap(&List[i], &List[j]);
             }
