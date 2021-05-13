@@ -6,13 +6,13 @@ class SortFixed
 {
     static void swap(T *xp, T *yp)
     {
-        int temp = (int)*xp;
+        T temp = *xp;
         *xp = *yp;
         *yp = temp;
     }
     static int partition(T List[], int low, int high)
     {
-        int pivot = List[high];
+        T pivot = List[high];
         int i = (low - 1);
         for (int j = low; j <= high; j++)
         {
