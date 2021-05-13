@@ -4,6 +4,7 @@ add_requires("catch2")
 target("test")
     set_kind("binary")
     add_files("src/*.cpp")
+    add_packages("catch2")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
