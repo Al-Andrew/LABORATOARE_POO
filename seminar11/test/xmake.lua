@@ -1,4 +1,5 @@
 add_rules("mode.debug", "mode.release")
+add_requires("catch2")
 
 target("test")
     set_kind("binary")
