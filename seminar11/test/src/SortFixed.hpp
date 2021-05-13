@@ -30,8 +30,8 @@ class SortFixed
         if (low < high)
         {    
             int pi = partition(List, low, high);
-            quickSort(List, high, pi - 1);
-            quickSort(List, pi + 1, low);
+            quickSort(List, low, pi - 1);
+            quickSort(List, pi + 1, high);
         }
     }
 
