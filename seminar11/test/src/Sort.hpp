@@ -27,7 +27,7 @@ class Sort
     }
     static void quickSort(T List[], int low, int high)
     {
-        while (low < high)
+        if (low < high)
         {    
             int pi = partition(List, low, high);
             quickSort(List, high, pi - 1);
