@@ -1,10 +1,10 @@
 #pragma once
-#include<iostream>
+#include <iostream>
 
 template <class T>
 class SortFixed
 {
-    static void swap(T* xp, T* yp)
+    static void swap(T *xp, T *yp)
     {
         int temp = (int)*xp;
         *xp = *yp;
@@ -12,23 +12,23 @@ class SortFixed
     }
     static int partition(T List[], int low, int high)
     {
-        int pivot =List[high];
+        int pivot = List[high];
         int i = (low - 1);
-        for (int j = low; j < high; j++)
-        {    
-            if (List[j] > pivot) {
+        for (int j = low; j <= high; j++)
+        {
+            if (List[j] < pivot)
+            {
                 i++;
                 swap(&List[i], &List[j]);
             }
-            else break;
         }
-        swap(&List[i + 1], &List[low]);
-        return (i+1);
+        swap(&List[i + 1], &List[high]);
+        return (i + 1);
     }
     static void quickSort(T List[], int low, int high)
     {
         if (low < high)
-        {    
+        {
             int pi = partition(List, low, high);
             quickSort(List, low, pi - 1);
             quickSort(List, pi + 1, high);
@@ -36,16 +36,17 @@ class SortFixed
     }
 
 public:
-
-    static void QuickSort(T List[],int n)
+    static void QuickSort(T List[], int n)
     {
-        quickSort(List, 0,n-1);
+        quickSort(List, 0, n - 1);
     }
 
-    static void print(T List[]) {
-        for (unsigned int i = 0; i <sizeof(List); i++) {
-            std::cout << List[i]<<" ";
+    static void print(T List[], int n)
+    {
+        for (unsigned int i = 0; i < n; i++)
+        {
+            std::cout << List[i] << " ";
         }
-        std::cout<<std::endl;
+        std::cout << std::endl;
     }
 };
