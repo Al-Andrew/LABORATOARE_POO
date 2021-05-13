@@ -2,7 +2,7 @@
 #include<iostream>
 
 template <class T>
-class Sort
+class SortFixed
 {
     static void swap(T* xp, T* yp)
     {
