@@ -1,0 +1,18 @@
+window_sizes 1920 1013 450 1464 955 0
+
+diagrams
+  active  classdiagram_ref 128055 // p1-ClassDiagram
+    1464 955 100 A4 0 0
+end
+show_stereotypes
+selected 
+  package_ref 129 // p1
+open
+  class_ref 128055 // Contact
+  class_ref 128311 // Prieten
+  class_ref 128439 // Cunoscut
+  class_ref 128567 // Coleg
+  class_ref 128695 // Agenda
+  class_ref 128823 // Contact_t
+end
+end

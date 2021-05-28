@@ -96,7 +96,7 @@ public:
 	//This requires T to be copy constructable
 	const Array<T>& operator+=(const T &newElem)
 	{
-		if( Size == Capacity )
+		if( Size >= Capacity )
 			throw ArrayException("Array capacity exceeded");
 
 		List[Size++] = new T(newElem);

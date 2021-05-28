@@ -55,4 +55,8 @@ int main()
         std::cout << e.what() << '\n';
     }
 
+    Array<int> arr(5);
+    arr += 6; 
+    std:: cout << arr[3] << '\n';
+
 }

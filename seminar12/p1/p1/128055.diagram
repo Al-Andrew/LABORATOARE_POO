@@ -1,0 +1,52 @@
+format 224
+
+classcanvas 128055 class_ref 128055 // Contact
+  classdiagramsettings member_max_width 0 end
+  xyzwh 128 265 2000 213 221
+end
+classcanvas 128951 class_ref 128311 // Prieten
+  classdiagramsettings member_max_width 0 end
+  xyzwh 14 542 2000 255 191
+end
+classcanvas 129207 class_ref 128439 // Cunoscut
+  classdiagramsettings member_max_width 0 end
+  xyzwh 276 542 2000 237 181
+end
+classcanvas 129463 class_ref 128567 // Coleg
+  classdiagramsettings member_max_width 0 end
+  xyzwh 532 539 2000 237 191
+end
+classcanvas 129719 class_ref 128695 // Agenda
+  classdiagramsettings member_max_width 0 end
+  xyzwh 437 209 2000 379 295
+end
+classcanvas 129975 class_ref 128823 // Contact_t
+  classdiagramsettings member_max_width 0 end
+  xyzwh 143 40 2000 177 151
+end
+relationcanvas 129079 relation_ref 128183 // <generalisation>
+  from ref 128951 z 2001 to ref 128055
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129335 relation_ref 128311 // <generalisation>
+  from ref 129207 z 2001 to ref 128055
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129591 relation_ref 128439 // <generalisation>
+  from ref 129463 z 2001 to ref 128055
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129847 relation_ref 128567 // <directional aggregation>
+  from ref 129719 z 2001 stereotype "<<vector>>" xyz 354.5 365.5 3000 to ref 128055
+  role_a_pos 350 347 3000 no_role_b
+  multiplicity_a_pos 350 376 3000 no_multiplicity_b
+end
+relationcanvas 130231 relation_ref 128823 // <unidirectional association>
+  from ref 128055 z 2001 to ref 129975
+  role_a_pos 241 198 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

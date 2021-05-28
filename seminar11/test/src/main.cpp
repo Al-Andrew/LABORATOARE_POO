@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include <catch2/catch.hpp>
+#include "catch2/catch.hpp"
 #include <algorithm>
 #include "Sort.hpp"
 #include "SortFixed.hpp"
@@ -17,6 +17,7 @@ TEST_CASE( "INTS", "[sort]"){
         int a[10] = {10,9,8,7,6,5,4,3,2,1};
         SortFixed<int>::QuickSort(a, 10);
         CHECK( il<int>({1,2,3,4,5,6,7,8,9,10}) ==  a );
+    
     }
     SECTION("SHUFFLED"){
         int a[10] = {1,2,3,4,5,6,7,8,9,10};
@@ -27,7 +28,7 @@ TEST_CASE( "INTS", "[sort]"){
         std::shuffle(std::begin(a), std::end(a), g);
 
         SortFixed<int>::QuickSort(a, 10);
-        CHECK( il<int>({1,2,3,4,5,6,7,8,9,10}) ==  a );
+        CHECK( (il<int>({1,2,3,4,5,6,7,8,9,10}) ==  a) == true );
     }
 }
 

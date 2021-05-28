@@ -1,0 +1,10 @@
+window_sizes 1920 1013 229 1685 827 128
+
+diagrams
+  active  classdiagram_ref 128055 // lab-diagram
+    1685 827 90 A4 180 0
+end
+show_stereotypes
+selected 
+  package_ref 129 // demo
+end

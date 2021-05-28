@@ -1,0 +1,36 @@
+[
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar12\\p1\\impl",
+  "arguments": ["clang", "-c", "/EHsc", "-Qunused-arguments", "-m64", "-std=c++17", "-o", "build\\.objs\\impl\\windows\\x64\\src\\Agenda.cpp.obj", "src\\Agenda.cpp"],
+  "file": "src\\Agenda.cpp"
+},
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar12\\p1\\impl",
+  "arguments": ["clang", "-c", "/EHsc", "-Qunused-arguments", "-m64", "-std=c++17", "-o", "build\\.objs\\impl\\windows\\x64\\src\\Coleg.cpp.obj", "src\\Coleg.cpp"],
+  "file": "src\\Coleg.cpp"
+},
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar12\\p1\\impl",
+  "arguments": ["clang", "-c", "/EHsc", "-Qunused-arguments", "-m64", "-std=c++17", "-o", "build\\.objs\\impl\\windows\\x64\\src\\Contact.cpp.obj", "src\\Contact.cpp"],
+  "file": "src\\Contact.cpp"
+},
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar12\\p1\\impl",
+  "arguments": ["clang", "-c", "/EHsc", "-Qunused-arguments", "-m64", "-std=c++17", "-o", "build\\.objs\\impl\\windows\\x64\\src\\Contact_t.cpp.obj", "src\\Contact_t.cpp"],
+  "file": "src\\Contact_t.cpp"
+},
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar12\\p1\\impl",
+  "arguments": ["clang", "-c", "/EHsc", "-Qunused-arguments", "-m64", "-std=c++17", "-o", "build\\.objs\\impl\\windows\\x64\\src\\Cunoscut.cpp.obj", "src\\Cunoscut.cpp"],
+  "file": "src\\Cunoscut.cpp"
+},
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar12\\p1\\impl",
+  "arguments": ["clang", "-c", "/EHsc", "-Qunused-arguments", "-m64", "-std=c++17", "-o", "build\\.objs\\impl\\windows\\x64\\src\\main.cpp.obj", "src\\main.cpp"],
+  "file": "src\\main.cpp"
+},
+{
+  "directory": "C:\\dev\\POO_1S2\\seminar12\\p1\\impl",
+  "arguments": ["clang", "-c", "/EHsc", "-Qunused-arguments", "-m64", "-std=c++17", "-o", "build\\.objs\\impl\\windows\\x64\\src\\Prieten.cpp.obj", "src\\Prieten.cpp"],
+  "file": "src\\Prieten.cpp"
+}]
